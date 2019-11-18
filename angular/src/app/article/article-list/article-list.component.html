@@ -1,0 +1,11 @@
+<section>
+    <h3>Article List</h3>
+    <div *ngFor="let article of articles | async" [ngClass]= "'sub-child-menu'">
+    <p>{{article.articleId}}. {{article.title}}, {{article.category}}
+       <button type="button" (click)="goToEdit(article)" class="btn btn-danger">Edit</button>
+    </p>
+    </div>
+    <div [ngClass]= "'sub-child-container'">
+       <router-outlet></router-outlet>  
+    </div>
+ </section>
